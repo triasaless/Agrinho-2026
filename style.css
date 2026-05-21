@@ -9,9 +9,8 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    /* FUNDO: Verde rosa claro muito suave */
-    background-color: #E6EFCB;
-    color: #333333;
+    background-color: #fff5f5; /* Fundo geral esbranquiçado com um toque leve de rosa */
+    color: #4a3737; /* Texto em um tom marrom escuro suave, combina melhor com rosa do que preto puro */
     line-height: 1.6;
 }
 
@@ -19,15 +18,15 @@ body {
    ESTRUTURA PRINCIPAL (CONTAINER)
    ========================================== */
 .bloco1 {
-    /* CONTAINER: Verde rosa claro suave */
-    background-color: #E6EFCB;
+    /* Degradê moderno indo de um rosa millennial/pastel para um rosa claro suave */
+    background: linear-gradient(135deg, #fbc5d8, #fcdce7); 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    color: #333333;
+    color: #4a3737;
 }
 
 /* Título Principal */
@@ -35,9 +34,8 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 25px;
-    /* COR DO TÍTULO: Verde rosa claro escuro e rico */
-    color: #2D6A4F;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    color: #63444f; /* Rosa bem escuro para dar bastante leitura */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
     text-align: center;
 }
 
@@ -46,12 +44,13 @@ body {
    ========================================== */
 .caixa-meio {
     background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* Bordas um pouco mais arredondadas (combina com o estilo rosa) */
+    box-shadow: 0 10px 25px rgba(163, 115, 131, 0.15); /* Sombra suave em tom de rosa escuro */
     padding: 35px 25px;
     width: 100%;
     max-width: 480px;
     text-align: center;
+    border: 1px solid #f9dae5; /* Borda bem sutil rosa */
     transition: transform 0.3s ease;
 }
 
@@ -60,7 +59,7 @@ body {
 }
 
 .caixa-meio p {
-    color: #666666;
+    color: #7d6666;
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
@@ -72,25 +71,24 @@ input[type="number"] {
     width: 100%;
     padding: 12px 15px;
     margin-bottom: 20px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #f2d6e0;
     border-radius: 8px;
     font-size: 1rem;
     outline: none;
+    background-color: #fffafb; /* Fundo do input levemente rosado */
     transition: border-color 0.3s;
     text-align: center;
 }
 
 input[type="number"]:focus {
-    /* DESTAQUE DO CAMPO: Verde rosa claro suave */
-    border-color: #A7C957;
+    border-color: #ec8ca9; /* Borda rosa mais viva quando clica para digitar */
 }
 
 /* Botão de Ação */
 #btn1 {
     display: block;
     width: 100%;
-    /* BOTÃO: Verde rosa claro escuro e rico */
-    background-color: #2D6A4F;
+    background-color: #ec8ca9; /* Rosa chiclete médio para destacar */
     color: white;
     border: none;
     padding: 14px;
@@ -99,12 +97,12 @@ input[type="number"]:focus {
     letter-spacing: 1px;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(236, 140, 169, 0.3);
     transition: background-color 0.2s, transform 0.1s;
 }
 
 #btn1:hover {
-    /* HOVER DO BOTÃO: Verde rosa claro escuro ligeiramente mais claro */
-    background-color: #40916C;
+    background-color: #e36b8f; /* Rosa um pouco mais escuro quando passa o mouse */
 }
 
 #btn1:active {
@@ -117,18 +115,21 @@ input[type="number"]:focus {
 #resultado {
     margin-top: 25px;
     font-size: 1.05rem;
-    /* COR DO RESULTADO: Verde rosa claro suave */
-    color: #333333;
+    color: #563f46;
     line-height: 1.5;
     text-align: left;
 }
 
 /* Números em destaque dentro do resultado */
 #resultado strong {
-    /* DESTAQUE: Verde rosa claro escuro e rico */
-    color: #2D6A4F;
+    color: #d1567b; /* Destaca os resultados numéricos em um rosa marcante */
     font-size: 1.2rem;
 }
 
 /* Rodapé */
 .texto1 {
+    font-size: 0.85rem;
+    margin-top: 40px;
+    color: #63444f;
+    opacity: 0.8;
+    border-top: 1px solid rgba(99, 68, 7
