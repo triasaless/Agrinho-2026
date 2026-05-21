@@ -1,64 +1,101 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Site do Projeto</title>
+<head>
+    <title>BioAgro - Do Milho ao Plástico</title>
+    <style>
+        /* Mantive sua estrutura base e melhorei o visual */
+        .bloco1 {
+            background-color: #27ae60; /* Verde um pouco mais escuro, bem agro */
+            padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: white;
+            min-height: 100vh; /* Ocupa a tela toda */
+        }
 
-        <style>
-            /* AQUI COMEÇA O CSS PARA DAR COR E TAMANHO */
+        .caixa-meio {
+            background-color: white; /* Fundo branco para destacar o conteúdo */
+            border: 2px solid #27ae60;
+            border-radius: 8px; /* Bordas arredondadas dão um toque moderno */
+            margin: 20px auto;
+            max-width: 500px; /* Não deixa a caixa espalhar demais */
+            padding: 25px;
+            color: #333;
+        }
 
-            /* ESTILO PARA O BLOCO VERDE QUE SEGURA TUDO */
-            .bloco1{
-                background-color: #2ecc71; /* DEFINE A COR DE FUNDO COMO VERDE */
-                padding: 20px; /* COLOCA UM ESPAÇO DE 20 PIXELS DENTRO */
-                font-family: sans-serif; /* USA UMA FONTE SEM AQUELAS SERIFAS */
-                text-align: center; /* ALINHA TODO O TEXTO NO MEIO */
-                color: white; /* COLOCA A COR DA LETRA COMO BRANCO */
-            } /* FECHA O ESTILO DO BLOCO 1 */
+        /* Estilo do campo de digitação */
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
 
+        #btn1 {
+            background: #f1c40f;
+            border: none;
+            padding: 12px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
 
-            /* ESTILO PARA A CAIXA QUE FICA NO CENTRO */
-            .caixa-meio {
-                border: 2px solid #ccc; /* COLOCA UMA BORDA CINZA DE 2 PIXELS */
-                margin: 20px; /* EMPURRA AS COISAS DE FORA 20 PIXELS */
-                padding: 15px; /* EMPURRA O TEXTO DE DENTRO 15 PIXELS */
-                color: black; /* MUDA A LETRA PARA PRETO PARA LER MELHOR */
-            } /* FECHA O ESTILO DA CAIXA MEIO */
+        #btn1:hover {
+            background: #f39c12; /* Escurece de leve ao passar o mouse */
+        }
 
-            /* ESTILO DO BOTÃO AMARELO */
-            #btn1 {
-                background: #f1c40f; /* COLOCA O FUNDO DO BOTÃO EM AMARELO */
-                border: none; /* TIRA AQUELA BORDA FEIA DO BOTÃO */
-                padding: 10px; /* DEFINE O TAMANHO INTERNO DO BOTÃO */
-                font-weight: bold; /* DEIXA O TEXTO EM NEGRITO */
-                cursor: pointer; /* MOSTRA A MÃOZINHA QUANDO PASSA O MOUSE */
-            } /* FECHA O ESTILO DO BOTÃO */
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #27ae60;
+            font-size: 18px;
+        }
 
-            /* ESTILO DO TEXTO DO RODAPÉ */
-            .texto1 {
-                font-size: 12px; /* DEIXA A LETRA BEM PEQUENININHA */
-                margin-top: 50px; /* EMPURRA O RODAPÉ PARA BAIXO */
-                border-top: 1px solid #000; /* CRIA UMA LINHA PRETA EM CIMA */
-            } /* FECHA O ESTILO DO TEXTO 1 */
-
-            /* FIM DA TAG DE ESTILO CSS */
-        </style>
-    </head>
-    <body>
+        .texto1 {
+            font-size: 12px;
+            margin-top: 50px;
+            border-top: 1px solid #fff;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="bloco1">
+        <div style="font-size: 28px; font-weight: bold;">Tecnologia Agro: Milho em Bioplástico</div>
         
-        <div class="bloco1">
+        <div class="caixa-meio">
+            <p>Descubra quanto bioplástico pode ser gerado com a sua colheita!</p>
+            
+            <input type="number" id="qtdMilho" placeholder="Quantas toneladas de milho?">
+            
+            <div id="btn1" onclick="calcularPlastic()">CALCULAR IMPACTO</div>
 
-            <div style="font-size: 25px;">Meu Projeto de Tecnologia</div>
-            <div class="caixa-meio">
-                <p>O milho vira bioplástico e depois vira música!</p>
-
-                <div id="btn1" onclick="alert('Incrível, né?')">CLIQUE AQUI</div>
-            </div>
-
-            <div class="texto1">Criado por mim</div>
+            <div id="resultado"></div>
         </div>
 
-        <script>
-            // MANDA UMA MENSAGEM PARA O CONSOLE DO DESENVOLVEDOR
-            console.log("O site abriu."); // REGISTRA O LOG DE ABERTURA
-        </script>
-    </body>
+        <div class="texto1">Criado por mim e hospedado no GitHub</div>
+    </div>
+
+    <script>
+        function calcularPlastic() {
+            // Pega o valor digitado pelo usuário
+            let milho = document.getElementById("qtdMilho").value;
+            
+            if (milho === "" || milho <= 0) {
+                document.getElementById("resultado").innerText = "Por favor, digite um valor válido! 🌽";
+                return;
+            }
+
+            // Regra de três fictícia/estimada (ex: 1 tonelada de milho gera ~200kg de bioplástico PLA)
+            let bioplastico = milho * 200;
+
+            // Mostra o resultado na tela trocando o texto da div
+            document.getElementById("resultado").innerHTML = `Com ${milho} toneladas de milho, você pode produzir cerca de <strong>${bioplastico} kg</strong> de bioplástico biodegradável! 🌍`;
+        }
+    </script>
+</body>
 </html>
