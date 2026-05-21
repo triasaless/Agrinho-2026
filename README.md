@@ -12,8 +12,3 @@ O projeto foi construído do zero, utilizando as tecnologias fundamentais do des
 * **HTML5:** Estruturação semântica da página.
 * **CSS3:** Design responsivo, moderno e estilizado com foco na temática agro-sustentável (layouts limpos e transições suaves).
 * **JavaScript (ES6):** Lógica de programação para manipulação do DOM, validação de dados e cálculos dinâmicos sem recarregamento de página.
-
-## 📦 Como rodar o projeto localmente
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git)
