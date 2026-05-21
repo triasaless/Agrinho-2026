@@ -9,7 +9,8 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f4f7f6;
+    /* FUNDO: Verde rosa claro muito suave */
+    background-color: #E6EFCB;
     color: #333333;
     line-height: 1.6;
 }
@@ -18,14 +19,15 @@ body {
    ESTRUTURA PRINCIPAL (CONTAINER)
    ========================================== */
 .bloco1 {
-    background: linear-gradient(135deg, #1e824c, #27ae60); /* Degradê verde agro */
+    /* CONTAINER: Verde rosa claro suave */
+    background-color: #E6EFCB;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    color: white;
+    color: #333333;
 }
 
 /* Título Principal */
@@ -33,7 +35,9 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 25px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    /* COR DO TÍTULO: Verde rosa claro escuro e rico */
+    color: #2D6A4F;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -43,7 +47,7 @@ body {
 .caixa-meio {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     padding: 35px 25px;
     width: 100%;
     max-width: 480px;
@@ -77,15 +81,17 @@ input[type="number"] {
 }
 
 input[type="number"]:focus {
-    border-color: #27ae60;
+    /* DESTAQUE DO CAMPO: Verde rosa claro suave */
+    border-color: #A7C957;
 }
 
 /* Botão de Ação */
 #btn1 {
     display: block;
     width: 100%;
-    background-color: #f1c40f; /* Amarelo ouro */
-    color: #2c3e50;
+    /* BOTÃO: Verde rosa claro escuro e rico */
+    background-color: #2D6A4F;
+    color: white;
     border: none;
     padding: 14px;
     font-size: 1rem;
@@ -97,7 +103,8 @@ input[type="number"]:focus {
 }
 
 #btn1:hover {
-    background-color: #f39c12;
+    /* HOVER DO BOTÃO: Verde rosa claro escuro ligeiramente mais claro */
+    background-color: #40916C;
 }
 
 #btn1:active {
@@ -110,25 +117,18 @@ input[type="number"]:focus {
 #resultado {
     margin-top: 25px;
     font-size: 1.05rem;
-    color: #2c3e50;
+    /* COR DO RESULTADO: Verde rosa claro suave */
+    color: #333333;
     line-height: 1.5;
     text-align: left;
 }
 
 /* Números em destaque dentro do resultado */
 #resultado strong {
-    color: #27ae60;
+    /* DESTAQUE: Verde rosa claro escuro e rico */
+    color: #2D6A4F;
     font-size: 1.2rem;
 }
 
 /* Rodapé */
 .texto1 {
-    font-size: 0.85rem;
-    margin-top: 40px;
-    opacity: 0.8;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 15px;
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
-}
