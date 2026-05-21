@@ -1,0 +1,134 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS (RESET)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   ESTRUTURA PRINCIPAL (CONTAINER)
+   ========================================== */
+.bloco1 {
+    background: linear-gradient(135deg, #1e824c, #27ae60); /* Degradê verde agro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+/* Título Principal */
+.titulo-principal {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* ==========================================
+   A CAIXA CENTRAL (CARD DO SIMULADOR)
+   ========================================== */
+.caixa-meio {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.caixa-meio:hover {
+    transform: translateY(-2px);
+}
+
+.caixa-meio p {
+    color: #666666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   ELEMENTOS DE ENTRADA (INPUT E BOTÃO)
+   ========================================== */
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    border-color: #27ae60;
+}
+
+/* Botão de Ação */
+#btn1 {
+    display: block;
+    width: 100%;
+    background-color: #f1c40f; /* Amarelo ouro */
+    color: #2c3e50;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#btn1:hover {
+    background-color: #f39c12;
+}
+
+#btn1:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   RESULTADO E RODAPÉ
+   ========================================== */
+#resultado {
+    margin-top: 25px;
+    font-size: 1.05rem;
+    color: #2c3e50;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Números em destaque dentro do resultado */
+#resultado strong {
+    color: #27ae60;
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+.texto1 {
+    font-size: 0.85rem;
+    margin-top: 40px;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 15px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+}
